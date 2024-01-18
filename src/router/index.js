@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     path: "/secret-admin",
     element: (
       <PrivateRoute>
-        <div>Secret Admin</div>
+        <Admin />
       </PrivateRoute>
     ),
   },
@@ -21,10 +21,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-  },
-  {
-    path: "/admin",
-    element: <Admin />,
   },
 ]);
 

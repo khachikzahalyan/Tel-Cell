@@ -36,9 +36,9 @@ function Login() {
   };
 
   return (
-    <div class="wrapper fadeInDown">
+    <div className="wrapper fadeInDown">
       <div id="formContent">
-        <div class="fadeIn first">
+        <div className="fadeIn first">
           <img src="/telcell.svg" id="icon" alt="User Icon" />
         </div>
         <form onSubmit={handleSubmit}>

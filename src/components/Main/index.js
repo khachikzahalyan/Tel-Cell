@@ -23,7 +23,12 @@ const Main = () => {
     3: <Exchange />,
   };
 
-  return <div className="Main">{components[currentComponent]}</div>;
+  // return <div className="Main">{components[currentComponent]}</div>;
+  return (
+    <div className="Main">
+      <Exchange />
+    </div>
+  );
 };
 
 export default Main;

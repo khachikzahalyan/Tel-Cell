@@ -1,6 +1,27 @@
+import { useEffect, useState } from "react";
+
+import getRates from "../../utils/getRates";
+
 import "./styles.css";
 
 const Exchange = () => {
+  const [rates, setRates] = useState({ buy: "", sell: "" });
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await getRates();
+
+        setRates({
+          buy: data[0].buy,
+          sell: data[0].sell,
+        });
+      } catch (er) {
+        console.error(er);
+      }
+    })();
+  }, []);
+
   return (
     <>
       <img src="/telcell.svg" alt="telcell" className="logo" />
@@ -21,8 +42,8 @@ const Exchange = () => {
                 <span>RUB</span>
               </div>
             </div>
-            <div>4.30</div>
-            <div>4.60</div>
+            <div>{rates.buy}</div>
+            <div>{rates.sell}</div>
           </div>
         </div>
         <footer className="flex">
