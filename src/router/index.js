@@ -3,12 +3,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../components/Main";
 import Login from "../components/Login";
 import PrivateRoute from "../components/PrivateRoute";
+import Admin from "../components/Admin";
 
 const router = createBrowserRouter([
   {
     path: "/secret-admin",
     element: (
-      <PrivateRoute isAuthenticated={false}>
+      <PrivateRoute>
         <div>Secret Admin</div>
       </PrivateRoute>
     ),
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+  },
+  {
+    path: "/admin",
+    element: <Admin />,
   },
 ]);
 

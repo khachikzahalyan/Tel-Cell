@@ -1,14 +1,21 @@
 import { useLayoutEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./styles.css";
+import { useStore } from "../../store";
 
 function Login() {
+  const navigate = useNavigate();
   const [error, setError] = useState(null);
   const [auth, setAuth] = useState({});
+
+  const { setStore } = useStore();
 
   useLayoutEffect(() => {
     document.body.style.backgroundColor = "#56baed";
     return () => (document.body.style.backgroundColor = "#fff");
   }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -16,16 +23,18 @@ function Login() {
     const validPassword = process.env.REACT_APP_PASS_KEY;
 
     if (auth.login === validLogin && auth.password === validPassword) {
-      console.log("oka sax");
+      setStore({ isAuthenticated: true });
+      navigate("/secret-admin");
     } else {
       setError("Invalid username/password");
     }
   };
 
   const handleFieldChange = (e, field) => {
-    setError(null);
+    error && setError(null);
     setAuth((prev) => ({ ...prev, [field]: e.target.value }));
   };
+
   return (
     <div class="wrapper fadeInDown">
       <div id="formContent">
