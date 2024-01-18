@@ -4,7 +4,7 @@ const VideoPlayer = () => {
   const ref = useRef();
 
   useEffect(() => {
-    setTimeout(() => (ref.current.muted = false), 500);
+    setTimeout(() => (ref.current.muted = false), 1000);
   }, [ref]);
 
   return (
