@@ -1,11 +1,7 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const VideoPlayer = () => {
   const ref = useRef();
-
-  // useEffect(() => {
-  //   setTimeout(() => (ref.current.muted = false), 2000);
-  // }, [ref]);
 
   return (
     <video

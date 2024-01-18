@@ -45,14 +45,14 @@ const Admin = () => {
         value={rates.buy}
         onChange={(e) => setRates((prev) => ({ ...prev, buy: e.target.value }))}
         placeholder="Arq"
-      ></input>
+      />
       <input
         value={rates.sell}
         onChange={(e) =>
           setRates((prev) => ({ ...prev, sell: e.target.value }))
         }
         placeholder="Vajarq"
-      ></input>
+      />
       <button disabled={!rates.buy || !rates.sell} onClick={handleUpdateRates}>
         Update
       </button>
