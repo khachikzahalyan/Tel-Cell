@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="256"
+   height="144"
+   viewBox="0 0 256 144"
+   sodipodi:docname="Telcell_Logo_Main_RGB.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath30">
+      <path
+         d="M 0,108 H 192 V 0 H 0 Z"
+         id="path28" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="Telcell_Logo_Main_RGB"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,144)">
+    <g
+       id="g10"
+       transform="translate(41.9755,65.3613)">
+      <path
+         d="m 0,0 v -22.677 h -5.995 v 16.892 h -7.06 V 0 Z"
+         style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path12" />
+    </g>
+    <path
+       d="m 43.846,59.582 h 5.995 v 5.785 h -5.995 z"
+       style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path14" />
+    <g
+       id="g16"
+       transform="translate(67.9774,42.6841)">
+      <path
+         d="m 0,0 v 5.785 h -10.215 v 2.661 h 7.817 v 5.785 h -7.817 v 2.661 H 0 v 5.785 H -16.21 V 0 Z"
+         style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path18" />
+    </g>
+    <g
+       id="g20"
+       transform="translate(86.2877,42.6841)">
+      <path
+         d="m 0,0 v 5.785 h -9.472 v 16.892 h -5.995 l 0,-22.677 z"
+         style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="path22" />
+    </g>
+    <g
+       id="g24">
+      <g
+         id="g26"
+         clip-path="url(#clipPath30)">
+        <g
+           id="g32"
+           transform="translate(98.0326,59.5958)">
+          <path
+             d="m 0,0 c 2.319,0 3.92,-1.387 4.514,-2.998 l 6.379,-0.007 c -0.677,5.068 -5.228,9.138 -10.98,9.138 -6.8,0 -11.531,-4.897 -11.531,-11.702 0,-6.805 4.893,-11.703 11.531,-11.703 5.612,0 10.11,3.573 11.055,9.119 L 4.494,-8.148 C 3.918,-9.925 2.137,-11.138 0,-11.138 c -3.174,0 -5.327,2.297 -5.327,5.569 C -5.327,-2.297 -3.252,0 0,0"
+             style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path34" />
+        </g>
+        <g
+           id="g36"
+           transform="translate(110.7228,65.3613)">
+          <path
+             d="m 0,0 v -22.677 h 16.21 v 5.785 H 5.995 v 2.661 h 7.816 v 5.785 H 5.995 v 2.661 H 16.21 V 0 Z"
+             style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path38" />
+        </g>
+        <g
+           id="g40"
+           transform="translate(145.2318,42.6841)">
+          <path
+             d="m 0,0 v 5.785 h -9.472 v 16.892 h -5.995 l 0,-22.677 z"
+             style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path42" />
+        </g>
+        <g
+           id="g44"
+           transform="translate(153.5165,65.3613)">
+          <path
+             d="M 0,0 H -5.995 V -22.677 H 9.472 v 5.785 H 0 Z"
+             style="fill:#ff5c39;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path46" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
