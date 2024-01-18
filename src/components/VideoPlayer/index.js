@@ -12,6 +12,7 @@ const VideoPlayer = () => {
       ref={ref}
       autoPlay
       muted
+      controls
       src="./TELLCELL_FULL.mp4"
       style={{ width: "100%", height: "100%" }}
     />
