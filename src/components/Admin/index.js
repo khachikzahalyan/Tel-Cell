@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 import getRates from "../../utils/getRates";
 import updateRates from "../../utils/updateRates";
 
+import "react-toastify/dist/ReactToastify.css";
+
+import "./styles.css";
+
 const Admin = () => {
-  const [success, setSuccess] = useState(false);
   const [rateId, setRateId] = useState(null);
 
   const [rates, setRates] = useState({
@@ -30,34 +34,48 @@ const Admin = () => {
   }, []);
 
   const handleUpdateRates = async () => {
-    setSuccess(false);
     const result = await updateRates(rateId, {
       buy: rates.buy,
       sell: rates.sell,
     });
 
-    if (result) setSuccess(true);
+    if (result) {
+      toast("Փոխարժեքը հաջողությամբ թարմացվեց!");
+    }
   };
 
   return (
-    <>
-      <input
-        value={rates.buy}
-        onChange={(e) => setRates((prev) => ({ ...prev, buy: e.target.value }))}
-        placeholder="Arq"
-      />
-      <input
-        value={rates.sell}
-        onChange={(e) =>
-          setRates((prev) => ({ ...prev, sell: e.target.value }))
-        }
-        placeholder="Vajarq"
-      />
-      <button disabled={!rates.buy || !rates.sell} onClick={handleUpdateRates}>
-        Update
+    <div className="styled-form-container">
+      <div className="input-container">
+        <p>Առք</p>
+        <input
+          className="styled-input"
+          value={rates.buy}
+          onChange={(e) =>
+            setRates((prev) => ({ ...prev, buy: e.target.value }))
+          }
+        />
+      </div>
+      <div className="input-container">
+        <p>Վաճառք</p>
+        <input
+          className="styled-input"
+          value={rates.sell}
+          onChange={(e) =>
+            setRates((prev) => ({ ...prev, sell: e.target.value }))
+          }
+        />
+      </div>
+
+      <button
+        className="styled-button"
+        disabled={!rates.buy || !rates.sell}
+        onClick={handleUpdateRates}
+      >
+        Թարմացնել
       </button>
-      {success && <p>toshnia, elav sax</p>}
-    </>
+      <ToastContainer />
+    </div>
   );
 };
 

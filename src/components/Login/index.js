@@ -10,7 +10,7 @@ function Login() {
   const [error, setError] = useState(null);
   const [auth, setAuth] = useState({});
 
-  const { setStore } = useStore();
+  const { store, setStore } = useStore();
 
   useLayoutEffect(() => {
     document.body.style.backgroundColor = "#56baed";
@@ -24,7 +24,7 @@ function Login() {
     const validPassword = process.env.REACT_APP_PASS_KEY;
 
     if (auth.login === validLogin && auth.password === validPassword) {
-      setStore({ isAuthenticated: true });
+      setStore({ ...store, isAuthenticated: true });
       navigate("/secret-admin");
     } else {
       setError("Invalid username/password");

@@ -1,26 +1,18 @@
-import { useEffect, useState } from "react";
+import { format } from "date-fns";
+import { hy } from "date-fns/locale";
 
-import getRates from "../../utils/getRates";
+import { useStore } from "../../store";
 
 import "./styles.css";
 
 const Exchange = () => {
-  const [rates, setRates] = useState({ buy: "", sell: "" });
+  const { store } = useStore();
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await getRates();
-
-        setRates({
-          buy: data[0].buy,
-          sell: data[0].sell,
-        });
-      } catch (er) {
-        console.error(er);
-      }
-    })();
-  }, []);
+  const formattedDate = format(new Date(), "MMMM dd, yyyy, HH:mm", {
+    locale: hy,
+  });
+  const [datePart, yearPart, timePart] = formattedDate.split(", ");
+  const modifiedDateTimeString = `${datePart}, ${yearPart}թ, ${timePart}`;
 
   return (
     <>
@@ -42,12 +34,14 @@ const Exchange = () => {
                 <span>RUB</span>
               </div>
             </div>
-            <div>{rates.buy}</div>
-            <div>{rates.sell}</div>
+            <div>{store?.rates?.buy}</div>
+            <div>{store?.rates?.sell}</div>
           </div>
         </div>
         <footer className="flex">
-          <div>Հունվարի 14, 2024թ, 11։11</div>
+          <div style={{ textTransform: "capitalize" }}>
+            {modifiedDateTimeString}
+          </div>
           <div>«ԹԵԼ-ՍԵԼ» ՓԲԸ</div>
         </footer>
       </div>
