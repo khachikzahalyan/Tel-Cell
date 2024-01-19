@@ -14,12 +14,13 @@ h2 {
 h1 {
   color: #231f20;
   font-weight: normal;
+  font-size: 28px;
 }
 
 h2 {
   font-family: "GraphikArmenian-Bold";
   font-weight: normal;
-  font-size: 57px;
+  font-size: 50px;
   color: #361766;
 }
 
@@ -58,7 +59,7 @@ h2 {
 }
 
 .row:last-child > div {
-  height: 230px;
+  height: 170px;
 }
 
 footer {
