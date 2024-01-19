@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Exchange from "../Exchange";
 import { useStore } from "../../store";
 import Information from "../Information";
-import VideoPlayer from "../VideoPlayer";
+// import VideoPlayer from "../VideoPlayer";
 import getRates from "../../utils/getRates";
 
 const Main = () => {
@@ -33,9 +33,9 @@ const Main = () => {
   }, []);
 
   const components = {
-    1: <VideoPlayer />,
-    2: <Information />,
-    3: <Exchange />,
+    // 1: <VideoPlayer />,
+    1: <Information />,
+    2: <Exchange />,
   };
 
   return <div className="Main">{components[currentComponent]}</div>;
