@@ -13,7 +13,7 @@ const Main = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentComponent((prevComponent) => {
-        return prevComponent === 3 ? 1 : prevComponent + 1;
+        return prevComponent === 2 ? 1 : prevComponent + 1;
       });
     }, 57000);
 
