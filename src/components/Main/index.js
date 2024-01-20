@@ -3,10 +3,8 @@ import { useEffect, useState } from "react";
 import Exchange from "../Exchange";
 import Information from "../Information";
 // import VideoPlayer from "../VideoPlayer";
-import getRates from "../../utils/getRates";
 
 const Main = () => {
-  const [rates, setRates] = useState({ buy: "", sell: "" });
   const [currentComponent, setCurrentComponent] = useState(1);
 
   useEffect(() => {
@@ -19,22 +17,10 @@ const Main = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const data = await getRates();
-
-        setRates({ buy: data[0].buy, sell: data[0].sell });
-      } catch (er) {
-        console.error(er);
-      }
-    })();
-  }, []);
-
   const components = {
     // 1: <VideoPlayer />,
     1: <Information />,
-    2: <Exchange rates={rates} />,
+    2: <Exchange />,
   };
 
   return <div className="Main">{components[currentComponent]}</div>;
