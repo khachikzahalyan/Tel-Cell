@@ -12,7 +12,7 @@ const Main = () => {
       setCurrentComponent((prevComponent) => {
         return prevComponent === 2 ? 1 : prevComponent + 1;
       });
-    }, 4000);
+    }, 60000);
 
     return () => clearInterval(intervalId);
   }, []);
