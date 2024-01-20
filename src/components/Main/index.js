@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Exchange from "../Exchange";
 import { useStore } from "../../store";
 import Information from "../Information";
-// import VideoPlayer from "../VideoPlayer";
+import VideoPlayer from "../VideoPlayer";
 import getRates from "../../utils/getRates";
 
 const Main = () => {
@@ -13,9 +13,9 @@ const Main = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentComponent((prevComponent) => {
-        return prevComponent === 2 ? 1 : prevComponent + 1;
+        return prevComponent === 3 ? 1 : prevComponent + 1;
       });
-    }, 57000);
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -33,9 +33,9 @@ const Main = () => {
   }, []);
 
   const components = {
-    // 1: <VideoPlayer />,
-    1: <Information />,
-    2: <Exchange />,
+    1: <VideoPlayer />,
+    2: <Information />,
+    3: <Exchange />,
   };
 
   return <div className="Main">{components[currentComponent]}</div>;
