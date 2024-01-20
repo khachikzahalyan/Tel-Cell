@@ -1,0 +1,108 @@
+* {
+  font-family: sans-serif;
+}
+.text {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.general {
+  width: 90%;
+  margin: auto;
+}
+
+.logoImg {
+  display: flex;
+  height: 200px;
+  width: 40%;
+}
+.logoImg img {
+  width: 109%;
+  height: 240px;
+}
+
+.logoImg span {
+  margin-top: 14%;
+  margin-right: 35px;
+}
+
+.generalBox {
+  width: 91%;
+  display: flex;
+  margin: auto;
+}
+.box1 {
+  width: 50%;
+}
+.box2 {
+  width: 50%;
+}
+.operators {
+  width: 90%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  border-radius: 7px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  color: #361766;
+}
+.operatorsPrecent {
+  color: #ff5c39;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+.utilityPrecent {
+  color: #ff5c39;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.bankPrecent {
+  margin-right: 10px;
+}
+.bankPrecent p {
+  color: #ff5c39;
+  border-bottom: 1px solid #dcdbdb;
+}
+
+.company {
+  margin-top: 10px;
+}
+
+.company p {
+  font-weight: normal;
+  font-size: 20px;
+}
+.zero {
+  font-size: 60px;
+  font-weight: normal;
+}
+.percent {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.x {
+  font-size: 12px;
+}
+.operatorsBank {
+  width: 88%;
+  padding: 10px 15px 25px 15px;
+  font-weight: normal;
+  border-radius: 7px;
+  background-color: #f4f4f4;
+}
+.banksBox {
+  display: flex;
+  border-bottom: 1px solid #dbdada;
+  justify-content: space-between;
+}
+#unistream {
+  line-height: 50px;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Exchange from "../Exchange";
-import Information from "../Information";
+import Services from "../Services";
 // import VideoPlayer from "../VideoPlayer";
 
 const Main = () => {
@@ -12,14 +12,14 @@ const Main = () => {
       setCurrentComponent((prevComponent) => {
         return prevComponent === 2 ? 1 : prevComponent + 1;
       });
-    }, 57000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   const components = {
     // 1: <VideoPlayer />,
-    1: <Information />,
+    1: <Services />,
     2: <Exchange />,
   };
 
