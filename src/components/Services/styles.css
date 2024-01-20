@@ -53,6 +53,7 @@
 
 h2 {
   color: #361766;
+  font-size: 18px;
 }
 .operatorsPrecent {
   color: #ff5c39;
@@ -104,6 +105,10 @@ h2 {
   display: flex;
   border-bottom: 1px solid #dbdada;
   justify-content: space-between;
+}
+
+.banksBox p {
+  font-size: 12px;
 }
 #unistream {
   line-height: 50px;
