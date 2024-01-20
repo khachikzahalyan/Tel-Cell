@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 
 import Exchange from "../Exchange";
-import { useStore } from "../../store";
 import Information from "../Information";
-import VideoPlayer from "../VideoPlayer";
+// import VideoPlayer from "../VideoPlayer";
 import getRates from "../../utils/getRates";
 
 const Main = () => {
-  const { setStore } = useStore();
+  const [rates, setRates] = useState({ buy: "", sell: "" });
   const [currentComponent, setCurrentComponent] = useState(1);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentComponent((prevComponent) => {
-        return prevComponent === 3 ? 1 : prevComponent + 1;
+        return prevComponent === 2 ? 1 : prevComponent + 1;
       });
-    }, 5000);
+    }, 57000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -25,7 +24,7 @@ const Main = () => {
       try {
         const data = await getRates();
 
-        setStore({ rates: { buy: data[0].buy, sell: data[0].sell } });
+        setRates({ buy: data[0].buy, sell: data[0].sell });
       } catch (er) {
         console.error(er);
       }
@@ -33,9 +32,9 @@ const Main = () => {
   }, []);
 
   const components = {
-    1: <VideoPlayer />,
-    2: <Information />,
-    3: <Exchange />,
+    // 1: <VideoPlayer />,
+    1: <Information />,
+    2: <Exchange rates={rates} />,
   };
 
   return <div className="Main">{components[currentComponent]}</div>;

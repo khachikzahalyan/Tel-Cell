@@ -1,13 +1,9 @@
 import { format } from "date-fns";
 import { hy } from "date-fns/locale";
 
-import { useStore } from "../../store";
-
 import "./styles.css";
 
-const Exchange = () => {
-  const { store } = useStore();
-
+const Exchange = ({ rates }) => {
   const formattedDate = format(new Date(), "MMMM dd, yyyy, HH:mm", {
     locale: hy,
   });
@@ -34,8 +30,8 @@ const Exchange = () => {
                 <span>RUB</span>
               </div>
             </div>
-            <div>{store?.rates?.buy}</div>
-            <div>{store?.rates?.sell}</div>
+            <div>{rates.buy}</div>
+            <div>{rates.sell}</div>
           </div>
         </div>
         <footer className="flex">
