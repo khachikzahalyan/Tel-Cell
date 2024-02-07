@@ -97,14 +97,13 @@ h2 {
 }
 .operatorsBank {
   width: 88%;
-  padding: 10px 15px 25px 15px;
+  padding: 10px 15px 10px 15px;
   font-weight: normal;
   border-radius: 7px;
   background-color: #f4f4f4;
 }
 .banksBox {
   display: flex;
-  border-bottom: 1px solid #dbdada;
   justify-content: space-between;
 }
 

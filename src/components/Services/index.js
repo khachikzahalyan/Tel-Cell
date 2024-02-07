@@ -39,22 +39,37 @@ function Services() {
           </div>
           <h2>Բանկեր</h2>
           <div className="operatorsBank">
-            <div className="banksBox">
+            {/* <div className="banksBox">
               <p>ՎՏԲ - Հայաստան Բանկ ՓԲԸ </p>
               <p>300֏</p>
-            </div>
-            <div className="banksBox">
+            </div> */}
+            {/* <div className="banksBox">
               <p>Ինեկոբանկ ԹԲԸ</p>
               <p>400֏</p>
-            </div>
+            </div> */}
             <div className="banksBox">
-              <p>ԱՄԻՕ Բանկ ՓԲԸ</p>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  width: "26%",
+                }}
+              >
+                <p>ԱՄԻՕ Բանկ ՓԲԸ</p>
+                <div style={{ width: "40px", height: "40px" }}>
+                  <img
+                    style={{ width: "40px", height: "40px" }}
+                    src="/amio.svg"
+                    alt="amio"
+                  />
+                </div>
+              </div>
               <p>300֏</p>
             </div>
-            <div className="banksBox">
+            {/* <div className="banksBox">
               <p>Արդշինբանկ ՓԲԸ</p>
               <p>500֏</p>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="box2">
