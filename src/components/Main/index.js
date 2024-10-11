@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import Exchange from "../Exchange";
 import Services from "../Services";
-// import VideoPlayer from "../VideoPlayer";
+import VideoPlayer from "../VideoPlayer";
 
 const Main = () => {
   const [currentComponent, setCurrentComponent] = useState(1);
@@ -18,9 +18,9 @@ const Main = () => {
   }, []);
 
   const components = {
-    // 1: <VideoPlayer />,
-    1: <Services />,
-    2: <Exchange />,
+    1: <VideoPlayer />,
+    2: <Services />,
+    3: <Exchange />
   };
 
   return <div className="Main">{components[currentComponent]}</div>;
