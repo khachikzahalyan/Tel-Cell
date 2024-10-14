@@ -8,14 +8,28 @@ const Main = () => {
   const [currentComponent, setCurrentComponent] = useState(1);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentComponent((prevComponent) => {
-        return prevComponent === 2 ? 1 : prevComponent + 1;
-      });
-    }, 60000);
+    let intervalDuration;
 
-    return () => clearInterval(intervalId);
-  }, []);
+    switch (currentComponent) {
+      case 1:
+        intervalDuration = 315000;
+        break;
+      case 2:
+      case 3:
+        intervalDuration = 60000;
+        break;
+      default:
+        intervalDuration = 60000;
+    }
+
+    const intervalId = setTimeout(() => {
+      setCurrentComponent((prevComponent) => {
+        return prevComponent === 3 ? 1 : prevComponent + 1;
+      });
+    }, intervalDuration);
+
+    return () => clearTimeout(intervalId);
+  }, [currentComponent]);
 
   const components = {
     1: <VideoPlayer />,

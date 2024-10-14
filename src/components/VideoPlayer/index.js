@@ -1,7 +1,7 @@
 import React from "react";
 
 const VideoPlayer = () => {
-  const videoId = "An14pbQ8IRg"; // ID вашего видео
+  const videoId = "An14pbQ8IRg";
 
   return (
     <div
@@ -9,13 +9,14 @@ const VideoPlayer = () => {
         position: "fixed",
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
+        width: "100vw",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "black", // Чтобы черный фон был за видео
-        overflow: "hidden"
+        backgroundColor: "black",
+        overflow: "hidden",
+        zIndex: 9999
       }}
     >
       <div
@@ -34,7 +35,8 @@ const VideoPlayer = () => {
           allowFullScreen
           style={{
             width: "100%",
-            height: "100%"
+            height: "100%",
+            objectFit: "cover"
           }}
         ></iframe>
       </div>
