@@ -8,6 +8,7 @@ import "./styles.css";
 
 const Exchange = () => {
   const [rates, setRates] = useState({ buy: "", sell: "" });
+  console.log("rates: ", rates);
 
   const formattedDate = format(new Date(), "MMMM dd, yyyy, HH:mm", {
     locale: hy,
