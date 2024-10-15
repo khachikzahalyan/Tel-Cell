@@ -16,13 +16,13 @@ const VideoPlayer = () => {
         alignItems: "center",
         backgroundColor: "black",
         overflow: "hidden",
-        zIndex: 9999
+        zIndex: 9999,
       }}
     >
       <div
         style={{
           width: "100%",
-          height: "100%"
+          height: "100%",
         }}
       >
         <iframe
@@ -36,7 +36,7 @@ const VideoPlayer = () => {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover"
+            objectFit: "cover",
           }}
         ></iframe>
       </div>
