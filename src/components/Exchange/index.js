@@ -55,7 +55,7 @@ const Exchange = () => {
           <div style={{ textTransform: "capitalize" }}>
             {modifiedDateTimeString}
           </div>
-          <div>«ԹԵԼ-ՍԵԼ» ՓԲԸ</div>
+          <div>«ԹԵԼ-ՍԵԼ» ԲԲԸ</div>
         </footer>
       </div>
     </>
