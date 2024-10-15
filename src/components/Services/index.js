@@ -55,7 +55,7 @@ function Services() {
                   width: "26%",
                 }}
               >
-                <p>ԱՄԻՕ Բանկ ՓԲԸ</p>
+                <p>ԱՄԻՕ Բանկ ԲԲԸ</p>
                 <div style={{ width: "40px", height: "40px" }}>
                   <img
                     style={{ width: "40px", height: "40px" }}
