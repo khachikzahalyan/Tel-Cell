@@ -8,33 +8,20 @@ const Main = () => {
   const [currentComponent, setCurrentComponent] = useState(1);
 
   useEffect(() => {
-    let intervalDuration;
+    const intervalDuration = 60000;
 
-    switch (currentComponent) {
-      case 1:
-        intervalDuration = 315000;
-        break;
-      case 2:
-      case 3:
-        intervalDuration = 60000;
-        break;
-      default:
-        intervalDuration = 60000;
-    }
-
-    const intervalId = setTimeout(() => {
-      setCurrentComponent((prevComponent) => {
-        return prevComponent === 3 ? 1 : prevComponent + 1;
-      });
+    const intervalId = setInterval(() => {
+      setCurrentComponent((prevComponent) =>
+        prevComponent === 2 ? 1 : prevComponent + 1
+      );
     }, intervalDuration);
 
-    return () => clearTimeout(intervalId);
-  }, [currentComponent]);
+    return () => clearInterval(intervalId);
+  }, []);
 
   const components = {
-    1: <VideoPlayer />,
+    1: <Exchange />,
     2: <Services />,
-    3: <Exchange />
   };
 
   return <div className="Main">{components[currentComponent]}</div>;
