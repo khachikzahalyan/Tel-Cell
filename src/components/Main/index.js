@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import Exchange from "../Exchange";
 import Services from "../Services";
-import VideoPlayer from "../VideoPlayer";
 
 const Main = () => {
   const [currentComponent, setCurrentComponent] = useState(1);
