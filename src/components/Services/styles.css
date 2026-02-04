@@ -1,9 +1,8 @@
 * {
-  font-family: sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .text {
-  font-family: sans-serif;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .general {
@@ -20,6 +19,7 @@
 .logoImg img {
   height: 150px;
   margin-left: 50px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
 }
 
 .logoImg span {
@@ -42,19 +42,21 @@
 }
 .operators {
   width: 90%;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 15px;
+  padding: 15px 20px;
   display: flex;
   font-weight: bold;
   justify-content: space-between;
-  border-radius: 7px;
-  background-color: #f4f4f4;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ff5c39;
 }
 
 h2 {
-  color: #361766;
-  font-size: 18px;
+  color: #2c3e50;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 20px 0 15px 0;
 }
 .operatorsPrecent {
   color: #ff5c39;
@@ -79,6 +81,11 @@ h2 {
   margin-top: 10px;
 }
 
+.company-center {
+  display: flex;
+  align-items: center;
+}
+
 .company p {
   font-weight: normal;
   font-size: 16px;
@@ -96,11 +103,12 @@ h2 {
   font-size: 12px;
 }
 .operatorsBank {
-  width: 88%;
-  padding: 10px 15px 10px 15px;
+  width: 90%;
+  padding: 15px 20px;
   font-weight: normal;
-  border-radius: 7px;
-  background-color: #f4f4f4;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  border-left: 4px solid #ff5c39;
 }
 .banksBox {
   display: flex;
